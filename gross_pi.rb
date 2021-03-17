@@ -2,8 +2,7 @@
 require 'bigdecimal/math'
 
 #set gross to a gross (a dozen dozen) or set it form a CLI input.
-gross = 12*12 
-gross = ARGV[0].to_i unless ARGV[0].nil?
+gross = ARGV[0].nil? ? 12*12 : ARGV[0].to_i
 #set gross_pi to be accurate to gross decimal places
 gross_pi = BigMath.PI(gross)
 #truncate gross_pi to gross decimal places
